@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <style>
+
+
+        body{
+            background-color: rgba(0, 0, 0, 0.692);
+            color: white;
+        }
+
+        div#div1{
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            margin: auto;
+            padding: 10px;
+        }
+
+        div#div1 > p{
+            text-align: center;
+        }
+
+        div#div1 > p:hover{
+            color: aqua;
+        }
+
+        div.div2{
+            background-color: aqua;
+            width: 100px;
+            height: 50px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        div.div2 > p{
+            text-align: center;
+        }
+
+        div.div2 > p:hover{
+            color: green;
+        }
+
+        div.div3{
+            background-color: aqua;
+            width: 100px;
+            height: 50px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        div.div3 > p{
+            text-align: center;
+        }
+
+        div.div3 > p:hover{
+            color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!--
+        <h1>Iniciando estudos com DOM</h1>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em javascript</p>
+        <div id="msg1">Clique em mim</div>
+
+        <div id="div1">
+            <p>Olá, mundo!</p>
+        </div>
+
+        <div class="div2">Olá</div>
+
+        <div id="div3">Olá, Mundo!!</div>
+    -->
+
+    <h1>Meu Site</h1>
+
+    <div id="div1">
+
+        <p>Olá, mundo!</p>
+
+
+    </div>
+
+    <div class="div2">
+
+        <p>Olá, mundo!</p>
+
+    </div>
+
+    <div class="div3">
+
+        <p>Olá, mundo!</p>
+
+    </div>
+
+
+
+
+    <script>
+
+
+
+
+        /*
+            var corpo = window.document.body
+            var p1 = window.document.getElementsByTagName('p')[1]
+
+            //d.style.background = 'green'
+            //d.innerText = 'Estou aguardando'
+            //d.innerText = 'green'
+
+            var d = window.document.getElementById('msg1')
+
+            d.style.background = 'green'
+
+            var div1 = window.document.getElementById('div1')
+
+            div1.style.background = 'black'
+
+            var div2 = window.document.getElementsByClassName('div2')[0]
+
+            div2.style.color = 'yellow'
+
+            
+
+            var div3 = window.document.querySelector('div#div3')
+
+            div3.style.color = 'blue'
+        */
+
+        var div1 = window.document.getElementById('div1')
+
+        div1.style.background = 'green'
+
+        var div2 = window.document.getElementsByClassName('div2')[0]
+
+        div2.style.background = 'black'
+
+        var div3 = window.document.querySelector('div.div3')
+
+        div3.style.background = 'orange'
+
+        var n1 = 1
+
+
+
+
+
+
+
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
