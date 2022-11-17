@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <style>
+
+        /*
+            body{
+                font: normal 18pt Arial;
+            }
+
+            input{
+                font: normal 18pt Arial;
+                margin-top: 10px;
+                width: 100px;
+            }
+
+            div#res{
+                margin-top: 20px;
+            }
+        */
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!--
+        <h1>Somando valores</h1>
+
+        <input type="number" name="txtn1" id="txtn1"> +
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Somar" onclick="somar()">
+
+        <div id="res">Resultado</div>
+    -->
+
+    <!--
+        <h1>Somas simples em JavaScript</h1>
+
+        <input type="number" name="num1" id="num1">
+        <input type="number" name="num2" id="num2">
+        <input type="button" value="Somar" onclick="somar()">
+
+
+        <div id="res">Resultado da equação</div>
+    -->
+    <h1>Shipando nomes</h1>
+
+    <input type="text" name="nome" id="nome1">
+    <input type="text" name="nome" id="nome2">
+    <input type="button" value="Shipar" onclick="shipar()">
+
+    <div id="ship">O ship é...</div>
+
+
+
+
+    
+    <script>
+
+            function shipar(){
+                var nom1 = document.getElementById('nome1')
+                var nom2 = document.getElementById('nome2')
+                var ship = document.getElementById('ship')
+
+                var n1 = String(nom1.value)
+                var n2 = String(nom2.value)
+                var s = n1 + n2
+
+                ship.innerHTML = `O ship dessa vez será entre o ${n1} e a ${n2} é ${s}`
+            }
+
+
+
+        /*
+            function somar(){
+                var tn1 = window.document.getElementById('txtn1')
+                var tn2 = window.document.querySelector('input#txtn2')
+                var res = window.document.getElementById('res')
+
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 + n2
+
+                res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong> ${s} </strong>`
+        }
+        */
+        
+        /*
+            function somar(){
+                var num1 = document.getElementById('num1')
+                var num2 = document.getElementById('num2')
+                var res = document.getElementById('res')
+                var n1 = Number(num1.value)
+                var n2 = Number(num2.value)
+                var r = n1 + n2
+
+                res.innerHTML = `A soma entre os valores ${n1} e ${n2} é  igual a <strong> ${r} </strong>`
+
+            }
+        */
+
+
+    </script>
+
+
+
+
+
+
+
+    
+</body>
+</html>
