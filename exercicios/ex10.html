@@ -5,18 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETRAN</title>
+
+    <style>
+
+        /*
+        @charset 'UTF-8';
+
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            background-color: rgba(127, 255, 212, 0.479);
+        }
+
+        h1{
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        input{
+            display: block;
+            margin: auto;
+        }
+
+        input.naci{
+            width: 200px;
+        }
+
+        input.botao{
+            width: 100px;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1.2em;
+        }
+
+        */
+
+
+    </style>
 </head>
 <body>
 
-    <h1>Qual é sua nacionalidade</h1>
+    <!--
+        <h1>De qual país você veio?</h1>
+
+        <input class="naci" type="text" name="pais" id="pais">
+        <input class="botao" type="button" value="Mostrar" onclick="mostrar()">
+
+        <div id="res"></div>
 
 
 
+
+        <script>
+            
+            function mostrar(){
+                var país = window.document.getElementById('país')
+                var res = window.document.getElementById('res')
+                var p = 'Peru'
+
+                if (p == 'Brasil') {
+                    res.innerHTML = `Seu país é o ${p} então você é brasileiro`
+                } else {
+                    res.innerHTML = `Você estrangeiro(a)`
+                }
+            }
+
+        </script>
+    -->
+
+    <h1>Multas</h1>
+
+    Digite sua velocidade: <input type="number" name="svel" id="svel">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
 
 
     <script>
-        
 
+        function calcular() {
+            var svel = window.document.querySelector('input#svel')
+            var result = window.document.querySelector('div#res')
+            var vel = Number(svel.value)
+
+            result.innerHTML = `<p> Sua velocidade é de ${vel} Km/h<p>`
+                if (vel > 100) {
+                    result.innerHTML = `<p>Você ultrapassou o limite de velocidade, sua velocidade foi de ${vel}Km/h, por isso será multado em R$200,000 (Duzentos Reais)<p>`
+                }
+            result.innerHTML += `<p>Dirija sempre com o sinto de segurança!<p>`
+        }
 
 
 
