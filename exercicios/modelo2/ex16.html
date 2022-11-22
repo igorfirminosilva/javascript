@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS</title>
+    <title>Super contador</title>
 
     <style>
         @charset 'UTF-8';
@@ -34,7 +34,11 @@
             width: 500px;
             margin: auto;
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.548);
-        }   
+        }
+
+        input{
+            margin: 15px;
+        }
 
         footer{
             margin: 20px;
@@ -54,19 +58,36 @@
 <body>
 
     <header>
-        <h1>Título</h1>
+        <h1>Vamos contar...</h1>
 
     </header>
 
 
     <section>
-        <div>
-            testando
+        <div id="dados">
+            <form action="" method="get">
+
+                <p>Início:
+                    <input type="number" name="inicio" id="txti">
+                </p>
+                <p>Fim:
+                    <input type="number" name="fim" id="txtf">
+                </p>
+                <p>Passo:
+                    <input type="number" name="parar" id="txtp">
+                </p>
+
+                <p>
+                    <input type="button" value="Contar" onclick="contar()">
+                </p>
+
+
+
+            </form>
 
         </div>
-        <div>
-            olá
-
+        <div id="res">
+            Preparando contagem
         </div>
     </section>
 
@@ -77,6 +98,65 @@
 
     <script>
 
+        /*
+        function contar() {
+            var ini = document.getElementById('txti')
+            var f = document.getElementById('txtf')
+            var p = document.getElementById('txtp')
+            var res = document.getElementById('res')
+
+            if (ini.value.length == 0 || f.value.length == 0 || p.value.length == 0){
+                alert('[ERRO] Faltam dados')
+            } else {
+                res.innerText = 'Contando: '
+                var i = Number(ini.value)
+                var fim = Number(f.value)
+                var passo = Number(p.value)
+
+                for (let c = i ; c <= fim ; c += passo){
+                    res.innerHTML += `${c}`
+                }
+            }
+        }
+        */
+
+        function contar() {
+            var ini = document.getElementById('txti')
+            var f = document.getElementById('txtf')
+            var p = document.getElementById('txtp')
+            var res = document.getElementById('res')
+
+            if (ini.value.length == 0 || f.value.length == 0 || p.value.length == 0){
+                alert('[ERRO] Preencha os dados corretamente')
+                res.innerHTML = 'Impossivel contar'
+            } else {
+
+                res.innerHTML = 'Contando... '
+                var i = Number(ini.value)
+                var fim = Number(f.value)
+                var passo = Number(p.value)
+
+                if(passo <= 0){
+                    window.alert('Passo Inválido! Considerando passo 1')
+                    p = 1
+                }
+                
+                if (i < fim){
+                    //Contagem crescente
+                    for (var c = i ; c <= fim ; c += passo){
+                    res.innerHTML += ` ${c} \u{1F449} `
+                    }
+                } else {
+                    //Contagem decrescente
+                    for(var c = i ; c >= fim ; c -= passo){
+                        res.innerHTML += ` ${c} \u{1f449} `
+                    }
+            }
+            res.innerHTML += ` \u{1f3c1} `
+                
+        }
+
+    }
         
 
 
