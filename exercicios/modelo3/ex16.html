@@ -54,19 +54,19 @@
 <body>
 
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
 
     </header>
 
 
     <section>
         <div>
-            testando
-
+            <p>Número: <input type="number" name="num" id="txtn">
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
+            Digite um número acima
         </div>
         <div>
-            olá
-
+            <select name="tabuada" id="seltab" size="10"></select>
         </div>
     </section>
 
@@ -76,6 +76,52 @@
     </footer>
 
     <script>
+
+        /*
+        function tabuada() {
+            var num = document.getElementById('txtn')
+            var tab = document.getElementById('seltab')
+            
+            if (num.value.length == 0){
+                alert('Digita isso direito porra')
+            } else {
+                var n = Number(num.value)
+                var c = 1
+                tab.innerHTML = ''
+                while (c <= 10) {
+                    var item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n*c}`
+                    item.value = `tab${c}`
+                    tab.appendChild(item)
+                    c++
+                }
+            }
+            
+            
+
+        }
+        */
+
+        function tabuada() {
+            var num = document.getElementById('txtn')
+            var tab = document.getElementById('seltab')
+
+            
+            if (num.value.length == 0){
+                alert('Digita isso direito porra')   
+            } else {
+                var n = Number(num.value)
+                var c = 1
+                tab.innerHTML = ''
+
+                while (c <= 10) {
+                    var item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n*c}`
+                    tab.appendChild(item)
+                    c++
+                }
+            }
+        }
 
         
 
